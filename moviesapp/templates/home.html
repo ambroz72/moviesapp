@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+<html>
+
+    <head><h1>Home </h1> </head>
+    
+    {% comment %} <body style="background-color:skyblue;"> {% endcomment %}
+{% block content %}
+ <h2>
+    {% for i in movie_list %}
+<a href={% url 'moviesapp:detail' i.id %}>{{i.id}} {{i.name}} 
+    <img src={{i.img.url }} height='100px' width='100px'><br><br>
+{% endfor %}
+ </h2>
+ {% endblock %}
+    </body>
+    </html>
+    
