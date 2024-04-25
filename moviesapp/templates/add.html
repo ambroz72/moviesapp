@@ -1,12 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method='POST' enctype='multipart/form-data'>
-    {% csrf_token %}
-<input type='text' name='name' placeholder='name'>
-<input type='text' name='desc' placeholder='desc'>
-<input type='number' name='year' placeholder='year'>
-<input type='file' name='img'>
-<input type='submit'>
-
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Add New Movie</h5>
+                </div>
+                <div class="card-body">
+                    <form method='POST' enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type='text' name='name' class="form-control" placeholder='Enter movie name' required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc" class="form-label">Description:</label>
+                            <textarea name='desc' class="form-control" rows="3" placeholder='Enter movie description' required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="year" class="form-label">Year:</label>
+                            <input type='number' name='year' class="form-control" placeholder='Enter release year' required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="img" class="form-label">Image:</label>
+                            <input type='file' name='img' class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

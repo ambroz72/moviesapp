@@ -1,18 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
-<html>
 
-    <head><h1>Home </h1> </head>
-    
-    {% comment %} <body style="background-color:skyblue;"> {% endcomment %}
 {% block content %}
- <h2>
-    {% for i in movie_list %}
-<a href={% url 'moviesapp:detail' i.id %}>{{i.id}} {{i.name}} 
-    <img src={{i.img.url }} height='100px' width='100px'><br><br>
-{% endfor %}
- </h2>
- {% endblock %}
-    </body>
-    </html>
-    
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">Welcome to Our Movie Collection</h1>
+            <p class="lead">Explore our curated selection of movies</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        {% for movie in movie_list %}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card" style="height: 100%;">
+                <img src="{{ movie.img.url }}" class="card-img-top" style="height: 100%; object-fit: cover;" alt="{{ movie.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.name }}</h5>
+                    <p class="card-text">ID: {{ movie.id }}</p>
+                    <a href="{% url 'moviesapp:detail' movie.id %}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

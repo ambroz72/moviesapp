@@ -1,6 +1,22 @@
-<form method='POST'>
-    {% csrf_token%}
+{% extends 'base.html' %}
 
-Are you sure you want to delete
-    <input type='submit'>
-</form>
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Confirm Delete</h5>
+                </div>
+                <div class="card-body">
+                    <form method='POST'>
+                        {% csrf_token %}
+                        <p>Are you sure you want to delete?</p>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{{movies.name}}<br>
-{{movies.desc}}<br>
-{{movies.year}} <br>
-<img src={{movies.img.url }} height='100px' width='100px'><br><br>
-<a href="{% url 'moviesapp:update' movies.id %}" >edit</a>
-<a href="{% url 'moviesapp:delete' movies.id %}" >delete</a>
-{% comment %} <a class='btn btn-warning'>Edit </a> {% endcomment %}
-
-
-{% comment %} <a class='btn-btn-danger'>Delete</a>  {% endcomment %}
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card mt-5">
+                <img src="{{ movies.img.url }}" class="card-img-top" alt="{{ movies.name }}" style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movies.name }}</h5>
+                    <p class="card-text">{{ movies.desc }}</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Year:</strong> {{ movies.year }}</li>
+                    </ul>
+                    <div class="mt-3">
+                        <a href="{% url 'moviesapp:update' movies.id %}" class="btn btn-primary mr-2">Edit</a>
+                        <a href="{% url 'moviesapp:delete' movies.id %}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
