@@ -1,4 +1,4 @@
-# Django Simple E-Commerce Website  
+# Django Simple E-Commerce Website (Mini Movies website)
 This is a simple e-commerce website built with Django,Python,HTML,CSS,Bootstrap & Javascript 
 Project Title
 Movie Catalog Management System (MCMS)
