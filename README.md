@@ -18,3 +18,7 @@ Add Movie: Users can add new movies to the catalog by providing details such as 
 Update Movie: Users can update existing movie details, including name, description, release year, and image.
 
 Delete Movie: Users can delete movies from the catalog.
+
+![screenshot](screenshot/edit.png)
+
+![screenshot](screenshot/add.png)
