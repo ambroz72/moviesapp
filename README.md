@@ -21,4 +21,4 @@ Delete Movie: Users can delete movies from the catalog.
 
 ![screenshot](screenshot/edit.png)
 
-![screenshot](screenshot/add.png)
+![screenshot](screenshot/addmovie.png)
