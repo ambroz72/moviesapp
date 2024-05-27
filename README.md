@@ -2,6 +2,7 @@
 This is a simple e-commerce website built with Django,Python,HTML,CSS,Bootstrap & Javascript 
 Project Title
 Movie Catalog Management System (MCMS)
+![screenshot](Mini movie web - home page.png)
 
 Overview
 MCMS is a web-based application developed using Django framework for managing a catalog of movies. 
