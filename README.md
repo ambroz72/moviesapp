@@ -2,6 +2,9 @@
 This is a simple e-commerce website built with Django,Python,HTML,CSS,Bootstrap & Javascript 
 Project Title
 Movie Catalog Management System (MCMS)
+
+http://moviesapp.pythonanywhere.com/  (Valid until July 7, 2024.)
+
 ![screenshot](screenshot/home.png)
 
 Overview
