@@ -20,17 +20,14 @@ Users can view detailed information about a specific movie, including its name, 
 
 # Add Movie: 
 Users can add new movies to the catalog by providing details such as name, description, release year, and an image.
+![screenshot](screenshot/addmovie.png)
 
 # Update Movie:
 Users can update existing movie details, including name, description, release year, and image.
+![screenshot](screenshot/edit.png)
 
 # Delete Movie:
 Users can delete movies from the catalog.
-
-![screenshot](screenshot/edit.png)
-
-![screenshot](screenshot/addmovie.png)
-
 
 # Technologies Used
 
