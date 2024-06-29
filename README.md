@@ -36,8 +36,8 @@ Users can delete movies from the catalog.
 
 - Django
 - HTML/CSS
-- JavaScript
 - Django templates
+- Bootstrap 
 
 # Installation
 
